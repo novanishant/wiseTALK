@@ -32,7 +32,11 @@ model Companion {
   seed            String @db.Text
 
   createdAt       DateTime @default(now())
+<<<<<<< HEAD
   updatedAt     DateTime @updatedAt
+=======
+  updatedAt       DateTime @updatedAt
+>>>>>>> fullTextSearch
 
   category        Category @relation(fields:[categoryId],references:[id])
   categoryId      String
