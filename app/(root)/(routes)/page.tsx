@@ -9,6 +9,7 @@ interface RootPageProps {
     name: string;
   }
 }
+
 const RootPage = async ({ searchParams }: RootPageProps) => {
   const { categoryId, name } = searchParams;
 
@@ -43,7 +44,7 @@ const RootPage = async ({ searchParams }: RootPageProps) => {
   }
 
   const data = await prismadb.companion.findMany(query);
-  
+
   const categories = await prismadb.category.findMany();
   return (
     <div className="h-full p-4 space-y-2">
